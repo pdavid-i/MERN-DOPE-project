@@ -1,2 +1,4 @@
 {
-    "mongoURI":"mongodb+srv://davedabrave:only4Test!@cluster0.gyuip.mongodb.net/<dbname>?retryWrites=true&w=majority"}
+    "mongoURI":"mongodb+srv://davedabrave:only4Test!@cluster0.gyuip.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret":"bigSecret"
+}

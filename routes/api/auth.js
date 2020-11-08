@@ -10,7 +10,7 @@ const User = require('../../models/User');
 
 // @route   GET api/auth
 // @desc    test route for users
-// @access Public
+// @access  Public
 router.get('/', auth, async (req, res) =>{
     try {
         const user = await User.findById(req.user.id).select('-password');
@@ -23,7 +23,7 @@ router.get('/', auth, async (req, res) =>{
 
 // @route   POST api/auth
 // @desc    Authenticate user & get token
-// @access Public
+// @access  Public
 router.post('/', 
 [
     check('email', 'The email given is not a valid').isEmail(),
@@ -64,7 +64,7 @@ async (req, res) => {
 
         jwt.sign(payload,
         config.get('jwtSecret'),
-        {expiresIn: 7200},
+        {expiresIn: 720000},
         (err, token) => {
             if (err) throw err;
             res.json({ token });
